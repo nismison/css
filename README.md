@@ -90,9 +90,9 @@
 放在前面，先于排版、背景及颜色等属性。<br>
 
 >  1. 布局定位属性：position / display / float / clear / visibility / overflow <br>
-2. 自身属性：width / height / margin / padding / border / background <br>
-3. 文本属性：color / font / text-decoration / text-align / vertical-align / white- space / break-word <br>
-4. 其他属性（CSS3）：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient / CSS3 浏览器私有前缀在前，标准前缀在后<br>
+> 2. 自身属性：width / height / margin / padding / border / background <br>
+> 3. 文本属性：color / font / text-decoration / text-align / vertical-align / white- space / break-word <br>
+> 4. 其他属性（CSS3）：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient / CSS3 浏览器私有前缀在前，标准前缀在后<br>
 
 ```css
 .selector {

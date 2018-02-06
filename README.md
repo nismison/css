@@ -282,19 +282,19 @@ $color: red;
     -webkit-border-radius: $radius;
     border-radius: $radius;
 }
-.sp_1 {
+.sp-1 {
     @include radius; //参数使用默认值
 }
-.sp_2 {
+.sp-2 {
     @include radius(10px);
 }
 
 // CSS
-.sp_1 {
+.sp-1 {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-.sp_2 {
+.sp-2 {
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
@@ -304,18 +304,18 @@ $color: red;
 @mixin icon($x:0, $y:0) {
     background: url(/img/icon.png) no-repeat $x, $y;
 }
-.sp_1 {
+.sp-1 {
     @include icon(-10px, 0);
 }
-.sp_2 {
+.sp-2 {
     @include icon(-20px, 0);
 }
 
 // CSS
-.sp_1 {
+.sp-1 {
     background: url(/img/icon.png) no-repeat -10px 0;
 }
-.sp_2 {
+.sp-2 {
     background: url(/img/icon.png) no-repeat -20px 0;
 }
 ```
@@ -338,33 +338,33 @@ $color: red;
 
 ```css
 // SCSS
-.sp_1 {
+.sp-1 {
     font-size: 12px;
     color: red;
 }
-.sp_2 {
-    @extend .sp_1;
+.sp-2 {
+    @extend .sp-1;
     font-weight: bold;
 }
 // 或者
-%font_red {
+%font-red {
     font-size: 12px;
     color: red;
 }
-.sp_1 {
-    @extend %font_red;
+.sp-1 {
+    @extend %font-red;
 }
-.sp_2 {
-    @extend %font_red;
+.sp-2 {
+    @extend %font-red;
     font-weight: bold;
 }
 
 // CSS
-.sp_1 {
+.sp-1 {
     font-size: 12px;
     color: red;
 }
-.sp_2 {
+.sp-2 {
     font-size: 12px;
     color: red;
     font-weight: bold;
@@ -376,15 +376,15 @@ $color: red;
 ```css
 // SCSS
 @for $i from 1 through 3 {
-    .sp_#{$i} {
+    .sp-#{$i} {
         background-position: 0 (-2px) * $i;
     }
 }
 
 // CSS
-.sp_1 {background-position: 0 -2px;}
-.sp_2 {background-position: 0 -4px;}
-.sp_3 {background-position: 0 -6px;}
+.sp-1 {background-position: 0 -2px;}
+.sp-2 {background-position: 0 -4px;}
+.sp-3 {background-position: 0 -6px;}
 ```
 
 #### each 循环
@@ -392,36 +392,36 @@ $color: red;
 ```css
 // SCSS
 @each $name in list, detail {
-    .sp_#{$name} {
-        background-image: url(/img/sp_#{$name}.png);
+    .sp-#{$name} {
+        background-image: url(/img/sp-#{$name}.png);
     }
 }
 
 // CSS
-.sp_list {
-    background-image: url(/img/sp_list.png);
+.sp-list {
+    background-image: url(/img/sp-list.png);
 }
-.sp_detail {
-    background-image: url(/img/sp_detail.png);
+.sp-detail {
+    background-image: url(/img/sp-detail.png);
 }
 
 -------------------------------------------------------
 
 // SCSS
 @each $name, $color in (list, red), (detail, blue) {
-    .sp_#{$name} {
-        background-image: url(/img/sp_#{$name}.png);
+    .sp-#{$name} {
+        background-image: url(/img/sp-#{$name}.png);
         background-color: $color;
     }
 }
 
 // CSS
-.sp_list {
-    background-image: url(/img/sp_list.png);
+.sp-list {
+    background-image: url(/img/sp-list.png);
     background-color: red;
 }
-.sp_detail {
-    background-image: url(/img/sp_detail.png);
+.sp-detail {
+    background-image: url(/img/sp-detail.png);
     background-color: blue;
 }
 ```

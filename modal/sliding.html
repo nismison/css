@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="author" content="ISUX"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" href="css/sliding.css">
+</head>
+<body>
+<div class="btnLeft">left</div>
+<div class="btnRight">right</div>
+<div id="Modal" class="content">
+    <div id="close">close</div>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    $('.btnLeft').click(function () {
+        $('.content').addClass('sliding left');
+        setTimeout(function () {
+            $('.content').removeClass('sliding left');
+        }, 1000)
+    });
+    $('.btnRight').click(function () {
+        $('.content').addClass('sliding right');
+        setTimeout(function () {
+            $('.content').removeClass('sliding right');
+        }, 1000)
+    })
+</script>
+</body>
+</html>
